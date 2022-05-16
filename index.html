@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./img/page icon 1.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+        <div class="search__box js-search">
+            <input type="text" class="search__box__input">
+            <button class="search__box__btn js-btn">
+                <i class='bx bx-search-alt-2'></i>
+            </button>
+        </div>
+
+
+        <div class="modal">
+            <button class="modal__box__button js-openClick">
+                Click to see Modal Box 
+            </button>
+
+            <div class="modal__box js-open">
+                <div class="modal__box__container  ">
+
+                    <div class="modal__box__close js-closeIcon">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <div class="modal__box__header">
+                        <h3>this is modal box</h3>
+                    </div>
+                    <div class="modal__box__body">
+                        <p>Main content in box</p>
+                    </div>
+                    <div class="modal__box__footer">
+                        <p><i>nguyentranthevu@gmail.com</i></p>
+                    </div>
+                </div>
+            </div>
+
+        
+
+        </div>
+
+          
+      
+        
+    <script>
+        const searchBtn = document.querySelector('.js-btn');
+        const search = document.querySelector('.js-search');
+        function showSearchBox(){
+            search.classList.toggle('open');
+        }
+        searchBtn.addEventListener('click', showSearchBox);
+    </script>
+
+    <script>
+        const boxModal = document.querySelector('.js-openClick');
+        const openBox = document.querySelector('.js-open');
+        const closeBox = document.querySelector('.js-closeIcon');
+        function openModalBox(){    
+            openBox.classList.add('open');       
+        }
+
+        function hideModalBox(){
+            openBox.classList.remove('open');
+        }
+
+        boxModal.addEventListener('click', openModalBox);
+        closeBox.addEventListener('click', hideModalBox);
+
+    </script>
+</body>
+
+<footer class="footer">
+    <i>by Nguyen Tran The Vu</i>
+    <p> +84 564651350</p>
+    <p>nguyentranthevu@gmail.com</p>
+    <p>Github: https://github.com/ngtrthvu3007</p>
+</footer>
+</html>
